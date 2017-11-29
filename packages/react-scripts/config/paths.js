@@ -49,12 +49,15 @@ function getServedPath(appPackageJson) {
 // config after eject: we're in ./config/
 module.exports = {
   dotenv: resolveApp('.env'),
-  appBuild: resolveApp('build'),
+  appBuild: resolveApp('build/public'), // SSR
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveApp('src/index.js'),
+  appIndexJs: resolveApp('src/app.browser.js'), // SSR
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
+  serverBuild: resolveApp('build'), // SSR
+  serverIndexJs: resolveApp('src/app.node.js'), // SSR
+  serverServerJs: resolveApp('src/server.js'), // SSR
   yarnLockFile: resolveApp('yarn.lock'),
   testsSetup: resolveApp('src/setupTests.js'),
   appNodeModules: resolveApp('node_modules'),
@@ -69,12 +72,15 @@ const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath);
 module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
-  appBuild: resolveApp('build'),
+  appBuild: resolveApp('build/public'), // SSR
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveApp('src/index.js'),
+  appIndexJs: resolveApp('src/app.browser.js'), // SSR
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
+  serverBuild: resolveApp('build'), // SSR
+  serverIndexJs: resolveApp('src/app.node.js'), // SSR
+  serverServerJs: resolveApp('src/server.js'), // SSR
   yarnLockFile: resolveApp('yarn.lock'),
   testsSetup: resolveApp('src/setupTests.js'),
   appNodeModules: resolveApp('node_modules'),
@@ -99,12 +105,15 @@ if (
   module.exports = {
     dotenv: resolveOwn('template/.env'),
     appPath: resolveApp('.'),
-    appBuild: resolveOwn('../../build'),
+    appBuild: resolveOwn('../../build/public'), // SSR
     appPublic: resolveOwn('template/public'),
     appHtml: resolveOwn('template/public/index.html'),
-    appIndexJs: resolveOwn('template/src/index.js'),
+    appIndexJs: resolveOwn('template/src/app.browser.js'), // SSR
     appPackageJson: resolveOwn('package.json'),
     appSrc: resolveOwn('template/src'),
+    serverBuild: resolveOwn('../../build'), // SSR
+    serverIndexJs: resolveOwn('template/src/app.node.js'), // SSR
+    serverServerJs: resolveOwn('template/src/server.js'), // SSR
     yarnLockFile: resolveOwn('template/yarn.lock'),
     testsSetup: resolveOwn('template/src/setupTests.js'),
     appNodeModules: resolveOwn('node_modules'),

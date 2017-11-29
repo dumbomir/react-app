@@ -1,6 +1,6 @@
-# react-scripts
+# react-app-tools
 
-This package includes scripts and configuration used by [Create React App](https://github.com/facebookincubator/create-react-app).<br>
+This package includes scripts and configuration used by [React App SDK](https://github.com/kriasoft/react-app).<br>
 Please refer to its documentation:
 
 * [Getting Started](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started) – How to create a new app.
