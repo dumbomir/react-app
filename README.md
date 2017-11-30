@@ -1,6 +1,6 @@
 # React App SDK &nbsp; <a href="https://github.com/kriasoft/react-app/stargazers"><img src="https://img.shields.io/github/stars/kriasoft/react-app.svg?style=social&label=Star&maxAge=3600" height="20"></a> <a href="https://twitter.com/ReactSDK"><img src="https://img.shields.io/twitter/follow/ReactSDK.svg?style=social&label=Follow&maxAge=3600" height="20"></a>
 
-<a href="https://www.youtube.com/watch?v=GH3kJwQ7mxM"><img src="http://img.youtube.com/vi/GH3kJwQ7mxM/maxresdefault.jpg" width="1187" alt="Server-side rendering with React.js" /></a>
+<p align="center"><a href="https://www.youtube.com/watch?v=GH3kJwQ7mxM"><img src="http://img.youtube.com/vi/GH3kJwQ7mxM/maxresdefault.jpg" width="1187" alt="Server-side rendering with React.js" /><br /><sup>How fast is React SSR?</sup></a></p>
 
 Create React apps with server-side rendering (SSR) and no build configuration. It's intended to be
 used as a drop-in replacement for [`create-react-app`](https://github.com/facebookincubator/create-react-app).
@@ -26,14 +26,13 @@ demonstrated below:
 
 #### `package.json`
 
-```json
+```diff
 {
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
-  },
-  "devDependencies": {
-    "react-app-tools": "^2.0.0-beta.1"
+-   "react-scripts": "^1.0.17"
++   "react-app-tools": "^2.0.0-beta.1"
   },
   "scripts": {
     "test": "react-scripts test --env=jsdom",
